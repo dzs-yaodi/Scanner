@@ -1,7 +1,7 @@
 package com.ym.idcard.reg;
 
 
-import com.shouzhong.baseocr.OcrUtils;
+import com.idcard.OcrUtils;
 
 public class NativeOcr {
     static {
