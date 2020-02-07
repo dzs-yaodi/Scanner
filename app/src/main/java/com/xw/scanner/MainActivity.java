@@ -4,21 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ScanActivity;
 import com.google.gson.Gson;
 import com.idcard.CardResp;
-import com.xw.scannerlib.base.Callback;
-import com.xw.scannerlib.base.Result;
-import com.xw.scannerlib.base.ScannerView;
-import com.xw.scannerlib.base.ViewFinder;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ScannerView scannerView;
-    private TextView tvResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,24 +23,6 @@ public class MainActivity extends AppCompatActivity {
             startActivityForResult(new Intent(this, ScanActivity.class), 10001);
         });
 
-//        scannerView = findViewById(R.id.scannerView);
-//        tvResult = findViewById(R.id.tv_result);
-//
-//        scannerView.setShouldAdjustFocusArea(true);
-//        scannerView.setViewFinder(new ViewFinder(this));
-////        scannerView.setViewFinder(new ViewFinder2());
-//        scannerView.setSaveBmp(false);
-//        scannerView.setRotateDegree90Recognition(true);
-//        scannerView.setCallback(new Callback() {
-//            @Override
-//            public void result(Result result) {
-//                tvResult.setText("识别结果：\n" + result.toString());
-//                scannerView.startVibrator();
-//                scannerView.restartPreviewAfterDelay(2000);
-//            }
-//        });
-//
-//        scannerView.setEnableIdCard2(true);
     }
 
     @Override
@@ -68,25 +43,5 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
-
-    //    @Override
-//    protected void onResume() {
-//        super.onResume();
-//        scannerView.onResume();
-//    }
-//
-//    @Override
-//    protected void onPause() {
-//        super.onPause();
-//        scannerView.onPause();
-//    }
-//
-//    @Override
-//    protected void onDestroy() {
-//        scannerView.closeVibrator();
-//        super.onDestroy();
-//    }
-
 
 }
